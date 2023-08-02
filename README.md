@@ -125,3 +125,19 @@ If you find the code or datasets helpful in your research, please cite:
   year={2022}
 }
 ```
+
+# 记录
+## 安装
+```bash
+conda create -n crestereo python=3.7
+conda activate crestereo
+python3 -m pip install megengine -f https://megengine.org.cn/whl/mge.html
+python3 -m pip install -r requirements.txt
+# 推理代码
+python3 test.py --model_path ./models/crestereo_eth3d.mge \
+    --left img/test/left.png \
+    --right img/test/right.png 
+    --size 1024x1536 \
+    --output disparity.png
+模型超级大！
+```
